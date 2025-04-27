@@ -237,12 +237,16 @@ namespace bookieAPI.Controllers
                     }
                     if (value.Telefonszam != "") result.Telefonszam = value.Telefonszam;
                     if (value.TeljesNev != "") result.TeljesNev = value.TeljesNev;
-                    var location= ctx.Telepulesek.Where(x => x.TelepulesNev == value.TelepulesNev).FirstOrDefault();
-                    if (location==null)
+
+                    if (value.TelepulesNev != "")
                     {
-                        return Request.CreateResponse(HttpStatusCode.NotFound, "LOCATION_NOT_FOUND");
+                        var location= ctx.Telepulesek.Where(x => x.TelepulesNev == value.TelepulesNev).FirstOrDefault();
+                        if (location==null)
+                        {
+                            return Request.CreateResponse(HttpStatusCode.NotFound, "LOCATION_NOT_FOUND");
+                        }
+                        result.Telepules = location;
                     }
-                    if (value.TelepulesNev != "") result.Telepules = location;
 
                     ctx.SaveChanges();
                     var response = new ProfilResponseModel(result);

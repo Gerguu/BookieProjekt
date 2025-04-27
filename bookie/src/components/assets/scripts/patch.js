@@ -5,6 +5,7 @@ export async function Patch(oldpasswd) {
     var telefon = document.getElementById("telefonupdate")
     var fullname = document.getElementById("fullnameupdate")
     var telepules = document.getElementById("telepulesupdate")
+    var valasz=false;
     fetch(`https://localhost:44317/api/Profil/${user.Felhasznalonev}`, {
         method: "PATCH",
         headers: {
@@ -22,12 +23,11 @@ export async function Patch(oldpasswd) {
             if (!response.ok) {
                 if (response.status === 401) {
                     alert("Rossz jelszó")
-                }
-                if (response.status === 409) {
-                    alert("Az új jelszavad nem lehet a régi jelszavad")
+                    valasz=true
                 }
                 if (response.status === 404) {
                     alert("Nem találtunk ilyen települést")
+                    valasz=true
                 }   
                 else {
 
@@ -48,6 +48,8 @@ export async function Patch(oldpasswd) {
         })
         .catch((error) => {
             console.error("Hiba történt:", error);
-            alert("Server hiba. Kérlek próbáld meg később!");
+            if(!valasz){
+                alert("Server hiba. Kérlek próbáld meg később!");
+            }
         })
 }

@@ -73,6 +73,7 @@ body {
     min-width: 15rem  !important; 
     font-size: 1.3rem;
     cursor: pointer;
+    max-height: 23rem;
 }
 
 .termek:hover {
