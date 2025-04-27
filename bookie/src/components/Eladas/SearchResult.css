@@ -1,0 +1,11 @@
+.search-result:hover {
+  background-color: #83d1f8;
+  color: black;
+  cursor: pointer;
+  
+}
+.search-result{
+  display: grid !important;
+  grid-template-columns: none !important;
+  
+}

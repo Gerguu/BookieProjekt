@@ -1,0 +1,228 @@
+.content {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(39,39,96,1) 27%, rgba(48,135,214,1) 97%);
+    margin: auto;
+    overflow: visible; 
+}
+
+body {
+    overflow-y: auto;
+}
+
+#termekname{
+    display:inline-block !important;
+    min-height: 60px;
+    align-content: center;
+    overflow: hidden !important;
+    max-inline-size: 13rem !important;
+}
+.sort {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    background-color: rgba(83,132,190,255);
+    width: 210px;
+    font-size: 1.5rem;
+    margin-right: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 0px 20px 20px 0px;
+    padding-top: 5vw;
+    box-shadow: 1px 20px 38px rgba(255,255,255,1);
+    min-height: 80vh;
+    gap: 1vw;
+    top: 0px;
+}
+
+.sort input[type='text'] {
+    height: 35px;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+.sort select {
+    height: 35px;
+    border-radius: 7px;
+}
+
+.sort span {
+    font-weight: bold;
+}
+
+.termekek {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px; 
+    grid-gap: 2rem;
+    flex: 1;
+    overflow-y: hidden;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+}
+
+.termek {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    background-color: rgba(126,168,223,0.2);
+    visibility: 40%;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 15rem  !important; 
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.termek:hover {
+    border-color: white ;
+}
+.termek>div>img{
+    height: 15rem;
+}
+
+#termekdistance{
+    padding-left: 1rem;
+}
+#termekprice{
+    padding-right: 1rem;
+}
+
+.termek img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#csereDiv {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#cseresearch { 
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+#csereidspan{
+    font-weight: bold;
+    color: black;
+}
+.sajat{
+    background-color: rgba(196, 107, 107, 0.664) !important;
+}
+
+.sajat:hover {
+    border-color: white !important;
+}
+
+.sajat #termekprice {
+    left: 0 !important;
+    align-items: center !important;
+    padding-right: 0 !important;
+}
+
+.sajat #termekdistance {
+    padding-left: 0 !important;
+}
+
+#termekprice {
+    color: rgb(244, 40, 81);
+}
+
+@media (max-width: 1600px) {
+    .termekek {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1325px) {
+    .termekek {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .sort {
+        width: 10%;
+        min-width: 210px;
+        margin-right: 15px;
+    }
+    .termekek {
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #termekname{
+        max-inline-size: 10rem !important;
+    }
+}
+
+@media (max-width: 755px) {
+    .termek {
+        max-width: 13rem !important;
+        min-width: 13rem !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .termek {
+        max-width: 11rem !important;
+        min-width: 11rem !important;
+        font-size: 1rem !important;
+    }
+    .termekek {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 645px) {
+    .termek {
+        max-width: 15rem !important;
+        min-width: 15rem !important;
+        font-size: 1.5rem !important;
+    }
+    .termekek {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center !important;
+        justify-content: center !important;
+        
+    }
+}
+
+@media (max-width: 500px) {
+    .sort {
+        width: 20%;
+        min-width: 180px;
+    }
+    .termek {
+        max-width: 12rem !important;
+        min-width: 12rem !important;
+        font-size: 1.2rem !important;
+    }
+    .termekek {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .sort {
+        display: none;
+    }
+    .termek {
+        max-width: 15rem !important;
+        min-width: 15rem !important;
+        font-size: 1.5rem !important;
+    }
+    .termekek {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

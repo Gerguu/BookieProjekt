@@ -1,0 +1,82 @@
+.ujkonyv div {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 10rem 10rem;
+    grid-gap: 1rem;
+    grid-auto-flow: row;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-bottom: 1rem;
+    min-height: 3rem;
+}
+
+.ujkonyv div * {
+    background-color: rgb(126, 167, 221);
+    border: 5px solid rgba(83,132,190,255);
+    padding: 0.5rem;
+    border-radius: 10px;
+    
+}
+
+.ujkonyv {
+    padding-top: 10rem;
+
+}
+
+.ujkonyv input {
+    width: 11rem;
+}
+
+.ujkonyv span {
+    width: 10rem;
+}
+
+#ujkonyvgomb {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    float: right;
+    border: 5px solid rgba(83,132,190,255);
+    width: 22rem;
+}
+
+#inputfile {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.ujkonyv * {
+    color: white;
+}
+
+body {
+    background-color: rgb(27, 32, 54);
+}   
+button:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width: 380px) {
+    .ujkonyv input {
+        width: 40vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .ujkonyv div {
+        grid-template-columns: 20vw 20vw;
+        place-content:unset;
+        margin-left: 10vw;
+    }
+    
+    .ujkonyv span {
+        width: 40vw;
+        margin: 0;     
+        overflow: hidden;         
+        text-overflow: ellipsis;
+    }
+    
+    #ujkonyvgomb {
+        width: 85vw;
+    }
+}

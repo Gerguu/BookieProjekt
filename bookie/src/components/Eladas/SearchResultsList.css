@@ -1,0 +1,6 @@
+.results-list {
+  border-radius: 10px;
+  white-space: nowrap;      
+  overflow: hidden;         
+  text-overflow: clip;
+}

@@ -1,0 +1,427 @@
+.settingspage {
+    height: 93.5vh;
+    margin: 0 auto;
+    font-size: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.kijelolve{
+    border-color: rgba(39,39,96,1) !important;
+    background-color: rgba(39,39,96,1) !important;
+}
+.settings {
+    width: 20%;
+    height: 100%;
+    background-color: #374780;
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.settings input {
+    width: 95%;
+    height: 10%;
+    background-color: rgb(85, 170, 240);
+    border-radius: 3px;
+    border: 1px solid white;
+    margin-bottom: 4px;
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.settings input:hover {
+    cursor: pointer;
+    background-color: rgb(130, 188, 235);;
+}
+
+.settings input:first-child {
+    margin-top: 4px;
+}
+
+.settings input:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    width: 94.5%;
+    margin-bottom: 5px;
+}
+
+.bovebb {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    font-size: 22px;
+    vertical-align: top;  
+    overflow: visible !important;
+}
+
+.bovebben {
+    padding-top: 5rem;
+    display: grid !important;
+    place-content: center;
+    grid-template-rows: auto;
+    grid-gap: 2vw;
+}
+
+.bovebben span {
+    margin: 0;
+    font-size: 1rem;
+    align-content: center !important;
+}
+
+.bovebben div  {
+    display: flex;
+}
+
+.bovebben div * {
+    width: 15vw;
+}
+
+
+.bovebben * {
+    border-radius: 10px !important;
+}
+
+.bovebben :last-child > span {
+    margin-bottom: 0px;
+}
+
+.bovebben input {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 0px;
+    height: 50px;
+}
+.bovebben div > button {
+    height: 50px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    color: white !important;
+}
+
+.bovebben div * {
+    background-color: rgb(126, 167, 221);
+    border: 5px solid rgba(83, 132, 190, 255);
+    padding: 0.5rem;
+}
+
+#getintouchTextarea {
+    width: 100%;
+    max-width: 40rem;
+    height: 15rem;
+    resize: none;
+    margin: auto;
+    font-size: 18px;
+}
+
+#getintouchButton {
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    color: white;
+    
+}
+
+#copyright {
+    color: silver;
+}
+
+.hatter {
+    background-color: rgb(126, 167, 221);
+    border: 5px solid rgba(83, 132, 190, 255);
+    padding: 4px;
+}
+
+button :hover {
+    border: 5px solid darkblue !important;
+}
+
+#termekpriceprofil {
+    justify-content: center !important;
+}
+
+#mentesButton {
+    color: white;
+}
+
+.profiltermekek {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px; 
+    grid-gap: 2rem;
+    flex: 1;
+    overflow-y:scroll !important;
+    height: 100%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y:hidden;
+    padding-bottom: 3rem;
+}
+
+.profiltermek {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    background-color: rgba(126,168,223,0.2);
+    visibility: 40%;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    
+    max-height: 23rem;
+    margin-bottom: 1rem;
+    text-overflow:clip !important;
+}
+
+.profiltermek:hover{
+    border-color: white;
+    cursor: pointer;
+}
+
+.profiltermek>div>img{
+    height: 15rem;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.kiir, .errorspan{
+    width: 100% !important;
+    display: flex !important;
+    flex-flow: column;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.eladvatermek{
+    background-color: rgba(196, 107, 107, 0.664) !important;
+    padding: 1rem !important;
+}
+
+.eladvatermek:hover{
+    border-color: white !important;
+    cursor: pointer;
+}
+
+#fennakadas {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 1700px) {
+    .profiltermekek {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1360px) {
+    .profiltermekek {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1040px) {
+    .profiltermekek {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .profiltermek {
+        font-size: 1.2rem !important;
+        min-width: 14rem !important; 
+        max-width: 14rem;
+    }
+}
+
+@media (max-width: 980px) {
+    .profiltermek {
+        font-size: 1.0rem !important;
+        min-width: 13rem !important; 
+        max-width: 13rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .profiltermek {
+        font-size: 1.2rem !important;
+        min-width: 15rem !important; 
+        max-width: 15rem;
+    }
+    .profiltermekek {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    #getintouchTextarea {
+        max-width: 38rem;
+        
+    }
+}
+
+@media (max-width: 790px) {
+    #getintouchTextarea {
+        max-width: 33rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .settingspage {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .settings {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        background-color: #374780;
+    }
+    .settings input {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background-color: rgb(85, 170, 240);
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+    .settings input:last-child {
+        position: static;
+        margin-top: 0; 
+        width: auto;
+    }
+
+    .settings input:first-child {
+        margin-top: 0px;
+    }
+    .bovebb {
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 18px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #copyright {
+        display: none;
+    }
+    .profiltermekek {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .bovebben div * {
+        width: 28vw;
+    }
+    
+}
+
+@media (max-width: 570px) {
+    .profiltermek {
+        font-size: 0.8rem !important;
+        min-width: 12rem !important; 
+        max-width: 12rem;
+    }
+
+    #getintouchTextarea {
+        max-width: 24rem;
+        
+    }
+}
+@media (max-width: 480px) {
+    
+}
+
+@media (max-width: 450px) {
+    .bovebben * {
+        max-width: 30rem;
+    }
+
+    .bovebben input {
+        width: 7rem;
+        font-size: 0.8rem;
+    }
+
+    .bovebben div * {
+        width: 25vw;
+        font-size: 0.8rem;
+    }
+
+    
+    
+}
+
+@media (max-width: 440px) {
+    .profiltermekek {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .profiltermek {
+        font-size: 1.2rem !important;
+        min-width: 15rem !important; 
+        max-width: 15rem;
+    }
+
+    .settings {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 440px) {
+    .bovebben div * {
+        white-space: nowrap;      
+        overflow: hidden;         
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 410px) {
+    #getintouchTextarea {
+        max-width: 18rem;
+    }
+}
+
+@media (max-width: 385px) {
+
+}
+
+@media (max-width: 365px) {
+    .bovebben * {
+        max-width: 25rem;
+    }
+
+    .bovebben input {
+        width: 5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #getintouchTextarea {
+        max-width: 12rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #fennakadas {
+        padding-right: 1rem !important;
+    }
+}
